@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/DiagramNavigationDemo.git/static/css/main.283b7e0c.css",
+    "main.js": "/DiagramNavigationDemo.git/static/js/main.3eb93e63.js",
+    "static/js/787.292cd0ee.chunk.js": "/DiagramNavigationDemo.git/static/js/787.292cd0ee.chunk.js",
+    "static/media/schema4.png": "/DiagramNavigationDemo.git/static/media/schema4.a95020611442a9d0e5a7.png",
+    "static/media/schema3.png": "/DiagramNavigationDemo.git/static/media/schema3.d815fc313f51ec7e8a67.png",
+    "static/media/schema2.png": "/DiagramNavigationDemo.git/static/media/schema2.7bdc52fc6882ff768d90.png",
+    "static/media/schema5.png": "/DiagramNavigationDemo.git/static/media/schema5.183ec92530e981291633.png",
+    "static/media/schema1.png": "/DiagramNavigationDemo.git/static/media/schema1.66aadf4f768a8b192d16.png",
+    "static/media/logo.svg": "/DiagramNavigationDemo.git/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/DiagramNavigationDemo.git/index.html",
+    "static/media/Green-Up-Arrow.svg": "/DiagramNavigationDemo.git/static/media/Green-Up-Arrow.adbfe5709dd2303436186aa08a294356.svg",
+    "main.283b7e0c.css.map": "/DiagramNavigationDemo.git/static/css/main.283b7e0c.css.map",
+    "main.3eb93e63.js.map": "/DiagramNavigationDemo.git/static/js/main.3eb93e63.js.map",
+    "787.292cd0ee.chunk.js.map": "/DiagramNavigationDemo.git/static/js/787.292cd0ee.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.283b7e0c.css",
+    "static/js/main.3eb93e63.js"
+  ]
+}
