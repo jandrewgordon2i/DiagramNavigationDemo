@@ -8,30 +8,36 @@ code {
     monospace;
 }
 
+.arrow {
+  width: 30%;
+  margin: 0px;
+}
+
 #topLeftArrow {
-  margin-left: 50%;
+  margin-left: 75%;
+  margin-top: 50%;
   transform: rotate(45deg);
 }
 
 #topRightArrow {
-  margin-top: 8%;
-  margin-right: 150%;
+  margin-top: 60%;
+  margin-right: 75%;
+  margin-left: -5%;
   transform: rotate(135deg);
 }
 
 #bottomLeftArrow {
-  margin-bottom: 8%;
-  margin-left: 50%;
+  margin-bottom: 60%;
+  margin-left: 75%;
+  margin-right: 0%;
   transform: rotate(315deg)
 }
 
 #bottomRightArrow {
   transform: rotate(225deg);
-  margin-right: 150%;
-}
-
-#topLeftArrow {
-  vertical-align:middle
+  margin-right: 75%;
+  margin-left: -5%;
+  margin-bottom: 50%;
 }
 
 table {
@@ -47,6 +53,7 @@ table {
 td {
   position: relative;
   text-align: center;
+  padding: 0px;
 }
 
 .circleDiv {

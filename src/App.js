@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import { Circle, Ellipse } from 'react-shapes';
-import arrowIcon from "./Resources/Green-Up-Arrow.svg"
+import arrowIcon from "./Resources/Blue-Up-Arrow.png"
 import schema1 from "./Resources/schema1.png"
 import schema2 from "./Resources/schema2.png"
 import schema3 from "./Resources/schema3.png"
@@ -51,34 +51,34 @@ function App() {
     <div className="App">
       <table>
         <tr>
-          <td><img id="topLeftArrow" src={arrowIcon} width="50%" height="50%"/></td>
-          <td onMouseEnter={() => setTopCircleHovered(true)} onMouseLeave={() => setTopCircleHovered(false)} style={topCircleHovered? {color: "black"} : {color:'white'}}>
-            <Circle r={100} fill={topCircleHovered? {color: "#3E9C7A"} : {color:'#57D5A8'}} stroke={{color:'#57D5A8'}} strokeWidth={0} id="circle"/>
+          <td><img class="arrow" id="topLeftArrow" src={arrowIcon} width="50%" height="50%"/></td>
+          <td onMouseEnter={() => setTopCircleHovered(true)} onMouseLeave={() => setTopCircleHovered(false)} style={topCircleHovered? {color: "black"} : {color:'black'}}>
+            <Circle r={75} fill={topCircleHovered? {color: "#d5d6de"} : {color:'#ffffff'}} stroke={{color:'#414ab2'}} strokeWidth={2} id="circle"/>
             <a class="circleText" href="https://2itesting.com/">1. Create services and products</a>
           </td>
-          <td><img id="topRightArrow" src={arrowIcon} width="50%" height="50%"/></td>
+          <td><img class="arrow" id="topRightArrow" src={arrowIcon} width="50%" height="50%"/></td>
         </tr>
         <tr>
-          <td onMouseEnter={() => setLeftCircleHovered(true)} onMouseLeave={() => setLeftCircleHovered(false)} style={leftCircleHovered? {color: "black"} : {color:'white'}}>
-            <Circle r={100} fill={leftCircleHovered? {color: "#3E9C7A"} : {color:'#57D5A8'}} stroke={{color:'#57D5A8'}} strokeWidth={0} id="circle"/>
+          <td onMouseEnter={() => setLeftCircleHovered(true)} onMouseLeave={() => setLeftCircleHovered(false)} style={leftCircleHovered? {color: "black"} : {color:'black'}}>
+            <Circle r={75} fill={leftCircleHovered? {color: "#d5d6de"} : {color:'#ffffff'}} stroke={{color:'#414ab2'}} strokeWidth={2} id="circle"/>
             <a class="circleText" href="https://2itesting.com/">4. Carry out work for Clients</a>
           </td>
-          <td onMouseEnter={() => setEllipseHovered(true)} onMouseLeave={() => setEllipseHovered(false)} style={ellipseHovered? {color: "black"} : {color:'white'}}>
-            <Ellipse rx={125} ry={80} fill={ellipseHovered? {color: "#3E9C7A"} : {color:'#57D5A8'}} stroke={{color:'#57D5A8'}} strokeWidth={0} />
+          <td onMouseEnter={() => setEllipseHovered(true)} onMouseLeave={() => setEllipseHovered(false)} style={ellipseHovered? {color: "black"} : {color:'black'}}>
+            <Ellipse rx={80} ry={60} fill={ellipseHovered? {color: "#d5d6de"} : {color:'#ffffff'}} stroke={{color:'#414ab2'}} strokeWidth={2} />
             <a class="circleText" href="https://2itesting.com/">5. Service and govern the company</a>
           </td>
-          <td onMouseEnter={() => setRightCircleHovered(true)} onMouseLeave={() => setRightCircleHovered(false)} style={rightCircleHovered? {color: "black"} : {color:'white'}}>
-            <Circle r={100} fill={rightCircleHovered? {color: "#3E9C7A"} : {color:'#57D5A8'}} stroke={{color:'#57D5A8'}} strokeWidth={0} id="circle"/>
+          <td onMouseEnter={() => setRightCircleHovered(true)} onMouseLeave={() => setRightCircleHovered(false)} style={rightCircleHovered? {color: "black"} : {color:'black'}}>
+            <Circle r={75} fill={rightCircleHovered? {color: "#d5d6de"} : {color:'#ffffff'}} stroke={{color:'#414ab2'}} strokeWidth={2} id="circle"/>
             <a class="circleText" href="https://2itesting.com/">2. Identify clients interested in Services and Products</a>
           </td>
         </tr>
         <tr>
-          <td><img id="bottomLeftArrow" src={arrowIcon} width="50%" height="50%"/></td>
-          <td onMouseEnter={() => setBottomCircleHovered(true)} onMouseLeave={() => setBottomCircleHovered(false)} style={bottomCircleHovered? {color: "black"} : {color:'white'}}>
-            <Circle r={100} fill={bottomCircleHovered? {color: "#3E9C7A"} : {color:'#57D5A8'}} stroke={{color:'#57D5A8'}} strokeWidth={0} id="circle"/>
+          <td><img class="arrow" id="bottomLeftArrow" src={arrowIcon} width="50%" height="50%"/></td>
+          <td onMouseEnter={() => setBottomCircleHovered(true)} onMouseLeave={() => setBottomCircleHovered(false)} style={bottomCircleHovered? {color: "black"} : {color:'black'}}>
+            <Circle r={75} fill={bottomCircleHovered? {color: "#d5d6de"} : {color:'#ffffff'}} stroke={{color:'#414ab2'}} strokeWidth={2} id="circle"/>
             <a class="circleText" href="https://2itesting.com/">3. Sell services and products Clients</a>
           </td>
-          <td><img id="bottomRightArrow" src={arrowIcon} width="50%" height="50%"/></td>
+          <td><img class="arrow" id="bottomRightArrow" src={arrowIcon} width="50%" height="50%"/></td>
         </tr>
       </table>
       <img class="schema" id="schema1" src={schema1} style={topCircleHovered? {visibility: "visible"} : {visibility: "hidden"}}/>
