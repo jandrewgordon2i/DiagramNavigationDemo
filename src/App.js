@@ -2,53 +2,86 @@ import logo from './logo.svg';
 import './App.css';
 import { Circle, Ellipse } from 'react-shapes';
 import arrowIcon from "./Resources/Blue-Up-Arrow.png"
-import schema1 from "./Resources/schema1.png"
-import schema2 from "./Resources/schema2.png"
-import schema3 from "./Resources/schema3.png"
-import schema4 from "./Resources/schema4.png"
-import schema5 from "./Resources/schema5.png"
 import { Grid, Paper } from '@mui/material';
 import { useState, useEffect } from 'react';
 import useHover from './useHover';
+import MainDiagram from './MainDiagram';
+import SchemaDiagram from './SchemaDiagram';
 
 function App() {
 
-  const [topCircleHovered, setTopCircleHovered] = useState(false)
-  const [leftCircleHovered, setLeftCircleHovered] = useState(false)
-  const [rightCircleHovered, setRightCircleHovered] = useState(false)
-  const [bottomCircleHovered, setBottomCircleHovered] = useState(false)
-  const [ellipseHovered, setEllipseHovered] = useState(false)
+  // const [topCircleHovered, setTopCircleHovered] = useState(false)
+  // const [leftCircleHovered, setLeftCircleHovered] = useState(false)
+  // const [rightCircleHovered, setRightCircleHovered] = useState(false)
+  // const [bottomCircleHovered, setBottomCircleHovered] = useState(false)
+  // const [ellipseHovered, setEllipseHovered] = useState(false)
 
-  function getCurrentSchema() {
-    if(topCircleHovered){
-      return "schema1"
-    }
-    if(leftCircleHovered){
-      return "schema4"
-    }
-    if(rightCircleHovered){
-      return "schema2"
-    }
-    if(bottomCircleHovered){
-      return "schema3"
-    }
-    if(ellipseHovered){
-      return "schema5"
-    }
-  }
-  
-  let currentSchema = getCurrentSchema()
-  let schema = document.getElementById(currentSchema);
+  const [selectedSchema, setSelectedSchema] = useState(0)
+  const [currentRender, setCurrentRender] = useState("Main Diagram")
+  const [data, setData] = useState('')
 
-  const onMouseMove = (e) =>{
-    schema.style.left = e.pageX + 20 + 'px';
-    schema.style.top = e.pageY + 20 + 'px';
+  const sendSchemaNumber = (schemaNumber) => {
+    setSelectedSchema(schemaNumber)
   }
 
-  document.addEventListener('mousemove', onMouseMove);
+  const handleRenderChange = (renderdata) => {
+    setCurrentRender(renderdata)
+  }
+
+  // function getCurrentSchema() {
+    // if(topCircleHovered){
+    //   return "schema1"
+    // }
+    // if(leftCircleHovered){
+    //   return "schema4"
+    // }
+    // if(rightCircleHovered){
+    //   return "schema2"
+    // }
+    // if(bottomCircleHovered){
+    //   return "schema3"
+    // }
+    // if(ellipseHovered){
+    //   return "schema5"
+    // }
+  // }
   
+  // let currentSchema = getCurrentSchema()
+  // let schema = document.getElementById(currentSchema);
+
+  // const onMouseMove = (e) =>{
+  //   schema.style.left = e.pageX + 20 + 'px';
+  //   schema.style.top = e.pageY + 20 + 'px';
+  // }
+
+  // document.addEventListener('mousemove', onMouseMove);
+
+  function whatToRender() {
+    if(currentRender == "Main Diagram"){
+      return(<MainDiagram sendSchemaNumber={sendSchemaNumber} handleRenderChange={handleRenderChange}></MainDiagram>)
+    }
+    if(currentRender == "Schema Diagram"){
+      return(<SchemaDiagram selectedSchema={selectedSchema} handleRenderChange={handleRenderChange}></SchemaDiagram>)
+    }
+    
+    // if (currentRender = "Main Diagram"){
+    //   return(<MainDiagram onSelectSchema={handleSelectedSchema}></MainDiagram>)
+    // } if (currentRender = "Schema Diagram") {
+    //   return(<OtherThing selectedSchema={selectedSchema}></OtherThing>)
+    // }
+    // else {
+    //   return(<MainDiagram onSelectSchema={handleSelectedSchema}></MainDiagram>)
+    // }
+  }
+    
   return (
     <div className="App">
+
+      {/* <button onClick={() => doIsChanged()}>Change</button> */}
+
+      <div>{whatToRender()}</div>      
+
+      {/*
       <table>
         <tr>
           <td><img class="arrow" id="topLeftArrow" src={arrowIcon} width="50%" height="50%"/></td>
@@ -88,7 +121,7 @@ function App() {
       <img class="schema" id="schema5" src={schema5} style={ellipseHovered? {visibility: "visible"} : {visibility: "hidden"}}/>
 
 
-      {/* <div id="topRow">
+       <div id="topRow">
         <div id="topRowContent">
           <img id="topLeftArrow" src={arrowIcon} width="5%" height="5%"/>
           <Circle r={75} fill={{color:'#2409ba'}} stroke={{color:'#E65243'}} strokeWidth={0} />
@@ -108,8 +141,8 @@ function App() {
           <Circle r={75} fill={{color:'#2409ba'}} stroke={{color:'#E65243'}} strokeWidth={0} />
           <img id="bottomRightArrow" src={arrowIcon} width="5%" height="5%"/>
         </div>
-      </div>       */}
-    </div>
+      </div>   */}    
+    </div> 
   );
 }
 

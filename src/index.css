@@ -83,3 +83,20 @@ a {
   color: inherit;
 }
 
+.rectangle {
+  background-color: dodgerblue;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  border: solid;
+  border-color: black;
+  border-width: 1px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
+.rectangle:hover{
+  background-color: aqua;
+}
+
